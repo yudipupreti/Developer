@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+    <title>Homework</title>
+    <link rel="shortcut icon" href="images/favicon-1.ico" type="image/x-icon" />
+</head>
+<body>
+    <h2>
+        Write a program to sort an array elements in desending order.<br>
+    </h2>
+    <p>
+#include <stdio.h><br>
+void main (){<br>
+   int num[20];<br>
+   int i, j, a, n;<br>
+   printf("enter number of elements in an array\n");<br>
+   scanf("%d", &n);<br>
+   printf("Enter the elements\n");<br>
+   for (i = 0; i < n; ++i)<br>
+      scanf("%d", &num[i]);<br>
+   for (i = 0; i < n; ++i){<br>
+      for (j = i + 1; j < n; ++j){<br>
+         if (num[i] < num[j]){<br>
+            a = num[i];<br>
+            num[i] = num[j];<br>
+            num[j] = a;<br>
+         }<br>
+      }<br>
+   }<br>
+   printf("The numbers in descending order is:\n");<br>
+   for (i = 0; i < n; ++i){<br>
+      printf("%d\n", num[i]);<br>
+   }<br>
+}<br>
+    </p>
+    <h2>
+Write a program to find maximum numbers/elements of an array.<br>
+    </h2>
+    <p>
+#include <stdio.h><br>
+void main()<br>
+{<br>
+    int arr[MAX_SIZE];<br>
+    int i, max, min, size;<br>
+
+    printf("Enter size of the array: ");<br>
+    scanf("%d", &size);<br>
+
+    printf("Enter elements in the array: ");<br>
+    for(i=0; i<size; i++)<br>
+    {<br>
+        scanf("%d", &arr[i]);<br>
+    }<br>
+    
+    max = arr[0];<br>
+    min = arr[0];<br>
+
+    for(i=1; i<size; i++)<br>
+    {<br>
+        if(arr[i] > max)<br>
+        {<br>
+            max = arr[i];<br>
+        }<br>
+        if(arr[i] < min)<br>
+        {<br>
+            min = arr[i];<br>
+        }<br>
+    }<br>
+    printf("Maximum element = %d\n", max);<br>
+    printf("Minimum element = %d", min);<br>
+}<br>
+        </p>
+        <h2>
+Write a program to find minimum element of an array.<br>
+        </h2>
+        <p>
+#include <stdio.h><br>
+void main()<br>
+{
+  int array[100], size, c, location = 0;<br>
+
+  printf("Enter number of elements in array\n");<br>
+  scanf("%d", &size);<br>
+  
+  printf("Enter %d integers\n", size);<br>
+
+  for (c = 0; c < size; c++)<br>
+    scanf("%d", &array[c]);<br>
+
+  for (c = 1; c < size; c++)<br>
+    if (array[c] < array[location])<br>
+      location = c;<br>
+
+  printf("Minimum element is present at location %d and its value is %d.\n", location+1, array[location]);<br>
+}<br>
+        </p>
+</body>
+</html>
